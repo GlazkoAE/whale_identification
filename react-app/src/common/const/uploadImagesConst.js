@@ -1,0 +1,1 @@
+export const UPLOAD_IMAGES_MIME_TYPES = {'image/jpg, image/jpeg, image/png, image/tiff, image/bmp': ['.png', '.jpg', '.jpeg', '.tiff', '.bmp']};
