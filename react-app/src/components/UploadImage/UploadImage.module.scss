@@ -1,0 +1,112 @@
+.uploadImageContainer {
+  position: relative;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+}
+
+.dropzoneContainer {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+
+  &.active {
+    background: #212121;
+  }
+}
+
+.infoContainer {
+  border-radius: 10px;
+  border: 1px dashed #8495a5;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &:hover {
+    background: #212121;
+    cursor: pointer;
+  }
+
+  .dropzoneTextTitle {
+    color: #168FFF;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .dropzoneTextInfo {
+    color: #8495a5;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .dropzoneTextFormats {
+    color: #8495a5;
+    opacity: 0.6;
+    font-size: 14px;
+    position: relative;
+    top: 150px;
+  }
+}
+
+.imageContainer {
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  border: 1px dashed #8495a5;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .uploadedImage {
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+  }
+
+  .deleteOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.9);
+    border-radius: 10px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .deleteText {
+      color: #fff;
+      font-size: 16px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    &.isHidden {
+      display: none;
+    }
+  }
+}
+
+.imageProcessingContainer {
+  width: 100%;
+  height: 100%;
+  top: 1px;
+  left: 1px;
+  position: absolute;
+  display: flex;
+  border-radius: 10px;
+  background: rgba(18, 18, 18, 0.9);
+  align-items: center;
+  justify-content: center;
+}

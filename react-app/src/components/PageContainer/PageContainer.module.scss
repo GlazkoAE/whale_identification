@@ -1,0 +1,44 @@
+.pageContainer {
+  .analyzeImageButton {
+    background-color: #168FFF;
+    color: #ffffff;
+    text-transform: initial;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 80px;
+    border-radius: 24px;
+    width: 200px;
+
+    &:disabled {
+      color: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:hover {
+      background-color: #73BCFF;
+    }
+  }
+
+  .resultText {
+    max-width: 500px;
+    max-height: 500px;
+    color: #bdccd3;
+    font-size: 18px;
+    margin: 100px auto;
+    text-align: left;
+    font-weight: 600;
+
+    .result {
+      font-weight: normal;
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    .error {
+      font-weight: normal;
+      color: #F74141;
+      font-size: 16px;
+      display: inline-block;
+    }
+  }
+}
