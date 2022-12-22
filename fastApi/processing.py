@@ -3,13 +3,12 @@ import pickle
 import numpy as np
 import torch
 import torch.nn.functional as F
-import torchvision.transforms as transforms
+from torchvision import transforms
 from PIL import Image
-from matplotlib import cm
 
 from Siamese_Network import SiameseNetwork
 
-MODEL = "model_contrastive.pt"
+MODEL = "model.pt"
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = SiameseNetwork()
@@ -17,7 +16,7 @@ model.load_state_dict(torch.load(MODEL))
 model.to(device)
 model.eval()
 
-with open('database.pkl', 'rb') as f:
+with open('embeddings.pkl', 'rb') as f:
     filenames, whale_ids, embeddings = pickle.load(f)
 
 transform = transforms.Compose([transforms.Resize((128, 128)), transforms.ToTensor()])
@@ -62,4 +61,4 @@ def find_id_by_image(image):
         idx = score[1]
         res.append(idx)
 
-    return most_frequent_or_first(res) if min_dist < 0.5 else "NEW"
+    return most_frequent_or_first(res) if min_dist < 0.1 else "NEW"
